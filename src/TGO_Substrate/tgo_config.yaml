@@ -1,0 +1,16 @@
+loop:
+  tick_s: 0.25
+tokens:
+  ttl_s: 2.0
+  cpu_budget: 1.0
+  gpu_budget: 1.0
+  io_budget: 0.5
+bursts:
+  max_ms: 80
+  cpu_grant: 0.3
+  gpu_grant: 0.3
+  io_grant: 0.1
+safety:
+  min_cooldown_s: 1.0
+thresholds:
+  cpu_busy_percent: 65
