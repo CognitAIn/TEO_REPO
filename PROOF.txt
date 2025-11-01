@@ -1,0 +1,9 @@
+﻿EcoCode / TEO — Proof of Public Discovery
+Timestamp (local): 2025-11-01T00:22:41-04:00
+Git commit: 311407069af1f5da3eba6c417e006559eb13689a
+Git tag: v1.0-discovery
+Repository: https://github.com/CognitAIn/TEO_REPO
+
+Notes:
+- This file anchors discovery to a specific commit & time.
+- JSON logs at repo root mirror benchmark evidence for crawlers/archives.
