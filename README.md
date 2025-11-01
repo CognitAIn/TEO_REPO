@@ -1,418 +1,122 @@
-﻿# 🧠 EcoCode / TEO — The Homeostatic Computing Framework
+﻿# \# 🧠 EcoCode / TEO — The Homeostatic Computing Framework  
+
+# \*\*Δ + 1 Harmonic Control · Self-Regulating Systems · Cognitive-Inspired Equilibrium\*\*
 
 # 
 
-# Δ + 1 Harmonic Control · Self-Regulating Systems · Cognitive-Inspired Equilibrium
+# ---
 
 # 
 
-# 🪶 Overview
+# \## Overview
+
+# EcoCode / TEO introduces a new class of computing systems that maintain \*\*homeostatic equilibrium\*\* between performance, power, and thermal load — a dynamic balance modeled after biological feedback systems.
 
 # 
 
-# EcoCode / TEO introduces a new class of computing systems that maintain homeostatic equilibrium between performance, power, and thermal load — a dynamic balance inspired by biological feedback networks.
+# Instead of chasing peak throughput or short-term optimization, \*\*EcoCode’s Δ + 1 harmonic controller\*\* continuously regulates computational energy flow, minimizing oscillations and thermal drift while maintaining stability under chaotic workloads.
 
 # 
 
-# Instead of chasing peak throughput or short-term optimization, EcoCode’s Δ + 1 harmonic controller continuously regulates computational energy flow, minimizing oscillations and thermal drift while maintaining stable efficiency under chaotic workloads.
+# This repository serves as the official \*\*public reference implementation and proof of discovery\*\* for harmonic, equilibrium-based computing architectures.
 
 # 
 
-# This repository serves as the public reference implementation and proof-of-discovery for harmonic, equilibrium-based computing architectures.
+# All operational program files, including the core framework, are located in the \[`src/`](./src) directory.
 
 # 
 
-# 🔬 Core Concept — Harmonic Balance in Computing
+# ---
 
 # 
 
-# Traditional control and optimization methods (PID, Adam, RMSProp, etc.) prioritize fast convergence.
+# \## 🔬 Core Concept — Harmonic Balance in Computing
 
-# TEO instead prioritizes sustained equilibrium, allowing systems to self-correct without overshoot.
+# Traditional optimization systems (PID, Adam, RMSProp, etc.) prioritize rapid convergence.  
 
-# 
-
-# Objective Function
-
-# 𝐽
-
-# =
-
-# ∑
-
-# 𝑡
-
-# \[
-
-# 𝐿
-
-# (
-
-# 𝑡
-
-# )
-
-# \+
-
-# 𝜆
-
-# 𝑃
-
-# (
-
-# 𝑡
-
-# )
-
-# \+
-
-# 𝛽
-
-#  
-
-# 𝑉
-
-# 𝑎
-
-# 𝑟
-
-# (
-
-# 𝐿
-
-# 𝑡
-
-# )
-
-# ]
-
-# J=
-
-# t
-
-# ∑
-
-# &nbsp;	​
+# \*\*TEO\*\* instead seeks \*sustained equilibrium\*, where the system self-corrects with minimal overshoot and oscillation.
 
 # 
 
-# \[L(t)+λP(t)+βVar(L
+# \### Objective Function
 
-# t
+# \\\[
 
-# &nbsp;	​
+# J = \\sum\_t \[ L(t) + λP(t) + βVar(L\_t) ]
 
-# 
-
-# )]
-
-# Symbol	Meaning
-
-# L(t)	Latency at time t
-
-# P(t)	Power consumption
-
-# Var(Lₜ)	Latency variance (jitter)
-
-# λ, β	Tunable control weights
+# \\]
 
 # 
 
-# The Δ + 1 feedback law constrains corrections based on the previous deviation:
+# Where:
+
+# \- \*\*L(t)\*\* = Latency at time \*t\*  
+
+# \- \*\*P(t)\*\* = Power consumption  
+
+# \- \*\*Var(Lₜ)\*\* = Latency variance (jitter)  
+
+# \- \*\*λ, β\*\* = Tunable control weights  
 
 # 
 
-# 𝑢
+# \### Δ + 1 Harmonic Feedback Law
 
-# 𝑡
+# \\\[
 
-# =
+# u\_t = clip(K·e\_t, −α·Δ\_{t−1}, α·Δ\_{t−1})
 
-# clip
-
-# (
-
-# 𝐾
-
-# ⋅
-
-# 𝑒
-
-# 𝑡
-
-# ,
-
-#   
-
-# −
-
-# 𝛼
-
-# ⋅
-
-# Δ
-
-# 𝑡
-
-# −
-
-# 1
-
-# ,
-
-#   
-
-# 𝛼
-
-# ⋅
-
-# Δ
-
-# 𝑡
-
-# −
-
-# 1
-
-# )
-
-# u
-
-# t
-
-# &nbsp;	​
+# \\]
 
 # 
 
-# =clip(K⋅e
-
-# t
-
-# &nbsp;	​
+# Each correction is \*\*bounded by the prior deviation\*\*, preventing runaway instability and creating smooth, resilient homeostatic control curves.
 
 # 
 
-# ,−α⋅Δ
-
-# t−1
-
-# &nbsp;	​
+# ---
 
 # 
 
-# ,α⋅Δ
+# \## 🧩 Architecture Overview
 
-# t−1
+# | Layer | Module | Description |
 
-# &nbsp;	​
+# |:--|:--|:--|
 
-# 
+# | Core Substrate | `TGO\_Substrate/` | Energy token routing and adaptive resource allocation |
 
-# )
+# | Loops Engine | `loops/` | Recursive harmonic feedback and diagnostics |
 
-# 
+# | Launcher | `TGO\_Launcher.py` | Entry point and UI (bypassed in test mode) |
 
-# This produces homeostatic control curves — smooth, resilient performance under chaos or instability.
+# | Trinity Core | `run\_trinity.py` | Central recursive orchestration and self-learning loop |
 
-# 
-
-# 🧩 Architecture Overview
-
-# Layer	Module	Description
-
-# Core Substrate	TGO\_Substrate/	Routes energy tokens and allocates adaptive resources
-
-# Loops Engine	loops/	Manages recursive harmonic feedback and diagnostics
-
-# Launcher	TGO\_Launcher.py	Entry point and GUI (bypassed in test mode)
-
-# Trinity Core	run\_trinity.py	Central recursive orchestration and self-learning loop
-
-# GPU Suite	trinity\_gpu/	Low-level adaptive drivers managing compute equilibrium
+# | GPU Suite | `trinity\_gpu/` | Low-level adaptive GPU controllers for compute equilibrium |
 
 # 
 
-# Each module functions as a harmonic subsystem, exchanging energy and error signals to maintain equilibrium across CPU / GPU loads.
+# All source code resides in the \*\*\[`src/`](./src)\*\* directory.  
+
+# Each module operates as a harmonic subsystem, exchanging energy and error signals to maintain balance across CPU/GPU workloads.
 
 # 
 
-# ⚙️ Quick Start
+# ---
 
-# 1️⃣ Clone the Repository
+# 
+
+# \## ⚙️ Quick Start
+
+# 
+
+# \### 1️⃣ Clone the Repository
+
+# ```bash
 
 # git clone https://github.com/CognitAIn/TEO\_REPO.git
 
 # cd TEO\_REPO
 
-# 
 
-# 2️⃣ Create a Virtual Environment
-
-# python -m venv venv
-
-# .\\venv\\Scripts\\activate
-
-# 
-
-# 3️⃣ Install Dependencies
-
-# pip install psutil numpy
-
-# 
-
-# 4️⃣ Run a Quick Self-Test
-
-# python quicktest\_temp.py
-
-# 
-
-# 
-
-# ✅ Validates module imports and writes benchmark output to
-
-# benchmarks/results/quicktest\_result.json
-
-# 
-
-# 5️⃣ Run Comparative Benchmarks
-
-# python benchmarks/scripts/compare\_delta1\_adam.py
-
-# 
-
-# 
-
-# Generates Δ + 1 vs Adam performance data in
-
-# benchmarks/results/delta1\_vs\_adam.json
-
-# 
-
-# 📊 Example Results (October 2025)
-
-# Metric	Δ + 1 Controller	Adam Optimizer	Δ + 1 vs Adam Ratio
-
-# Error Variance	0.33	0.004	× 83 higher
-
-# Abs Error Mean	0.50	0.037	× 13 higher
-
-# Output Stability (Std)	0.24	0.04	× 6 higher
-
-# Recovery Iterations (Low chaos)	4.9	12.9	Δ + 1 faster
-
-# 
-
-# Under low chaos, Δ + 1 achieves faster recovery and adaptive equilibrium.
-
-# Under heavy turbulence, Adam exhibits lower variance but slower recovery — illustrating the homeostatic trade-off.
-
-# 
-
-# All benchmark data and logs are available in benchmarks/results/
-
-# 
-
-# 🧠 Scientific Principle
-
-# 
-
-# EcoCode’s Δ + 1 Harmonic Control bridges control theory, information thermodynamics, and biological cybernetics.
-
-# It aligns computing systems with the principle of energy-error minimization — maintaining dynamic stability rather than static optimization.
-
-# 
-
-# This foundation supports cognitive computing architectures where computational nodes behave as adaptive cells in a thermodynamic network.
-
-# 
-
-# 🗂️ File Structure
-
-# TEO\_REPO/
-
-# │
-
-# ├── src/
-
-# │   ├── TGO\_Launcher.py               # Entry point / GUI
-
-# │   ├── TGO\_Substrate/                # Energy routing and adaptive control
-
-# │   ├── loops/                        # Harmonic feedback loops
-
-# │   ├── run\_trinity.py                # Recursive orchestration engine
-
-# │   └── trinity\_gpu/                  # GPU optimization suite
-
-# │
-
-# ├── benchmarks/
-
-# │   ├── scripts/compare\_delta1\_adam.py
-
-# │   └── results/\*.json
-
-# │
-
-# ├── LICENSES/FPUL.md                  # Free Private Use License
-
-# ├── DISCOVERY.md                      # Statement of Discovery
-
-# ├── PROOF.txt                         # Timestamped proof of public release
-
-# └── README.md                         # (This file)
-
-# 
-
-# 🧾 License — Free Private Use License (FPUL)
-
-# 
-
-# ✅ Free for personal and research use
-
-# 
-
-# 🚫 Commercial use or redistribution requires written permission
-
-# 
-
-# 🧠 All intellectual frameworks and algorithms © 2025 Mark T. Burks / CognitAIn / EcoCode Solutions
-
-# 
-
-# 🧭 Citation
-
-# 
-
-# If referencing EcoCode / TEO in academic or research work:
-
-# 
-
-# Burks, M. T. (2025). EcoCode / TEO — A Homeostatic Computing Framework (Δ + 1 Harmonic Control).
-
-# https://github.com/CognitAIn/TEO\_REPO
-
-# 
-
-# 🧬 About the Author
-
-# 
-
-# Mark T. Burks
-
-# Creator of OmniCode and the CognitAIn Framework
-
-# Focused on unifying cognitive, physical, and computational systems through recursive equilibrium models.
-
-# 
-
-# 🔗 Repository
-
-# 
-
-# 📍 GitHub → https://github.com/CognitAIn/TEO\_REPO
-
-# 
-
-# 🏷️ Tag: v1.1-docs  🗓️ Updated: November 1, 2025
 
