@@ -1,0 +1,5 @@
+﻿{
+  "low":   {"amp": 0.8, "noise": 0.03, "impulse_p": 0.01, "steps": 400, "seed": 1234},
+  "mid":   {"amp": 1.0, "noise": 0.07, "impulse_p": 0.03, "steps": 600, "seed": 5678},
+  "high":  {"amp": 1.2, "noise": 0.12, "impulse_p": 0.07, "steps": 800, "seed": 9012}
+}
