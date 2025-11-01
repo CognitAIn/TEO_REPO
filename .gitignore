@@ -1,0 +1,26 @@
+﻿# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Virtualenvs ---
+.venv/
+venv/
+ENV/
+env/
+
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
+
+# --- Project runtime artifacts ---
+logs/
+*.log
+configs/auto_profile.json
