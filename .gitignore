@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿# --- Python ---
 __pycache__/
 *.py[cod]
@@ -24,3 +25,12 @@ Thumbs.db
 logs/
 *.log
 configs/auto_profile.json
+=======
+﻿.DS_Store
+*.log
+__pycache__/
+node_modules/
+dist/
+build/
+.env
+>>>>>>> 798d6da6c5d3d6cd89a87400df67a2d0f93d2f49

@@ -1,0 +1,8 @@
+{
+    "phase": "orchestrated",
+    "duration": 60.06,
+    "cpu_avg": 10.08,
+    "cpu_peak": 27.2,
+    "mem_avg": 38.66,
+    "mem_peak": 39.0
+}

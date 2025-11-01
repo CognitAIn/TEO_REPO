@@ -1,0 +1,11 @@
+﻿{
+  "": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EcoCode Organization Schema",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "contact": { "type": "string", "format": "email" }
+  },
+  "required": ["name", "url", "contact"]
+}

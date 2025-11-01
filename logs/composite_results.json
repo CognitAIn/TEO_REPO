@@ -1,0 +1,18 @@
+{
+    "timestamp": "2025-10-19 23:20:54",
+    "duration_total": 6335.229,
+    "cpu_change": -10.7,
+    "mem_change": -0.4,
+    "durations": [
+        0,
+        0,
+        0
+    ],
+    "latencies": [
+        0,
+        0,
+        0
+    ],
+    "mean_latency_global": 0,
+    "variance_latency": 0.0
+}

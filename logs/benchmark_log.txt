@@ -1,0 +1,165 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20251020090748
+Username: DESKTOP-UE307BC\user
+RunAs User: DESKTOP-UE307BC\user
+Configuration Name: 
+Machine: DESKTOP-UE307BC (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 7708
+PSVersion: 5.1.26100.6899
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.6899
+BuildVersion: 10.0.26100.6899
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+PS C:\Users\user\Desktop\Trinity_STEM> Write-Host "`n🧠 Starting Trinity Δ₂ Full Benchmark Suite..."
+
+🧠 Starting Trinity Δ₂ Full Benchmark Suite...
+PS C:\Users\user\Desktop\Trinity_STEM> Write-Host "   (baseline → orchestrator → throughput → comparison)"
+   (baseline → orchestrator → throughput → comparison)
+PS C:\Users\user\Desktop\Trinity_STEM> Write-Host "   Logs will be saved to: $logDir`n"
+   Logs will be saved to: C:\Users\user\Desktop\Trinity_STEM\benchmarks\logs_20251020_090747
+PS C:\Users\user\Desktop\Trinity_STEM> # === Helper: progress tracker ===
+PS C:\Users\user\Desktop\Trinity_STEM> function Show-Progress {
+    param([string]$phase, [int]$total, [int]$interval)
+    $elapsed = 0
+    while ($elapsed -lt $total) {
+        $cpu = [math]::Round((Get-Counter '\Processor(_Total)\% Processor Time').CounterSamples.CookedValue, 1)
+        $mem = [math]::Round((Get-Counter '\Memory\Available MBytes').CounterSamples.CookedValue, 1)
+        Write-Host ("[{0}] ⏱ {1,4}s | CPU {2,5:N1}% | MEM Avail {3,6:N1} MB" -f $phase, $elapsed, $cpu, $mem)
+        Start-Sleep -Seconds $interval
+        $elapsed += $interval
+    }
+}
+PS C:\Users\user\Desktop\Trinity_STEM> # === Phase 1: Baseline ===
+PS C:\Users\user\Desktop\Trinity_STEM> Write-Host "`n📊 [1/4] Running baseline system probe...`n"
+
+📊 [1/4] Running baseline system probe...
+PS C:\Users\user\Desktop\Trinity_STEM> $baseline = Start-Process -FilePath "python" -ArgumentList "-u $Bench\baseline_probe.py" -PassThru
+PS C:\Users\user\Desktop\Trinity_STEM> Start-Job -ScriptBlock { Show-Progress "Baseline" 60 10 }
+
+Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
+--     ----            -------------   -----         -----------     --------             -------
+1      Job1            BackgroundJob   Running       True            localhost             Show-Progress "Baseli...
+
+
+PS C:\Users\user\Desktop\Trinity_STEM> Wait-Process $baseline
+Wait-Process : Cannot find a process with the name "System.Diagnostics.Process (python)". Verify the process name and 
+call the cmdlet again.
+At line:1 char:1
++ Wait-Process $baseline
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (System.Diagnostics.Process (python):String) [Wait-Process], 
+ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.WaitProcessCommand
+Wait-Process : Cannot find a process with the name "System.Diagnostics.Process (python)". Verify the process name and
+call the cmdlet again.
+At line:1 char:1
++ Wait-Process $baseline
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (System.Diagnostics.Process (python):String) [Wait-Process], ProcessComm
+   andException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.WaitProcessCommand
+
+PS C:\Users\user\Desktop\Trinity_STEM> Write-Host "`n✅ Baseline complete.`n"
+
+✅ Baseline complete.
+PS C:\Users\user\Desktop\Trinity_STEM> # === Phase 2: Orchestrator ===
+PS C:\Users\user\Desktop\Trinity_STEM> Write-Host "`n⚙️ [2/4] Running Trinity Orchestrator benchmark...`n"
+
+⚙️ [2/4] Running Trinity Orchestrator benchmark...
+PS C:\Users\user\Desktop\Trinity_STEM> $orch = Start-Process -FilePath "python" -ArgumentList "-u $Bench\runtime_orchestrator.py" -PassThru
+PS C:\Users\user\Desktop\Trinity_STEM> Start-Job -ScriptBlock { Show-Progress "Orchestrator" 60 10 }
+
+Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
+--     ----            -------------   -----         -----------     --------             -------
+3      Job3            BackgroundJob   Running       True            localhost             Show-Progress "Orches...
+
+
+PS C:\Users\user\Desktop\Trinity_STEM> Wait-Process $orch
+Wait-Process : Cannot find a process with the name "System.Diagnostics.Process (python)". Verify the process name and 
+call the cmdlet again.
+At line:1 char:1
++ Wait-Process $orch
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (System.Diagnostics.Process (python):String) [Wait-Process], 
+ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.WaitProcessCommand
+Wait-Process : Cannot find a process with the name "System.Diagnostics.Process (python)". Verify the process name and
+call the cmdlet again.
+At line:1 char:1
++ Wait-Process $orch
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (System.Diagnostics.Process (python):String) [Wait-Process], ProcessComm
+   andException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.WaitProcessCommand
+
+PS C:\Users\user\Desktop\Trinity_STEM> Write-Host "`n✅ Orchestrator test complete.`n"
+
+✅ Orchestrator test complete.
+PS C:\Users\user\Desktop\Trinity_STEM> # === Phase 3: Throughput ===
+PS C:\Users\user\Desktop\Trinity_STEM> Write-Host "`n🚀 [3/4] Running throughput stress test...`n"
+
+🚀 [3/4] Running throughput stress test...
+PS C:\Users\user\Desktop\Trinity_STEM> $tp = Start-Process -FilePath "python" -ArgumentList "-u $Bench\orchestrator_throughput.py" -PassThru
+PS C:\Users\user\Desktop\Trinity_STEM> Start-Job -ScriptBlock { Show-Progress "Throughput" 60 10 }
+
+Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
+--     ----            -------------   -----         -----------     --------             -------
+5      Job5            BackgroundJob   Running       True            localhost             Show-Progress "Throug...
+
+
+PS C:\Users\user\Desktop\Trinity_STEM> Wait-Process $tp
+Wait-Process : Cannot find a process with the name "System.Diagnostics.Process (python)". Verify the process name and 
+call the cmdlet again.
+At line:1 char:1
++ Wait-Process $tp
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (System.Diagnostics.Process (python):String) [Wait-Process], 
+ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.WaitProcessCommand
+Wait-Process : Cannot find a process with the name "System.Diagnostics.Process (python)". Verify the process name and
+call the cmdlet again.
+At line:1 char:1
++ Wait-Process $tp
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (System.Diagnostics.Process (python):String) [Wait-Process], ProcessComm
+   andException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.WaitProcessCommand
+
+PS C:\Users\user\Desktop\Trinity_STEM> Write-Host "`n✅ Throughput test complete.`n"
+
+✅ Throughput test complete.
+PS C:\Users\user\Desktop\Trinity_STEM> # === Phase 4: Comparison ===
+PS C:\Users\user\Desktop\Trinity_STEM> Write-Host "`n📈 [4/4] Comparing baseline vs orchestrator results...`n"
+
+📈 [4/4] Comparing baseline vs orchestrator results...
+PS C:\Users\user\Desktop\Trinity_STEM> python -u "$Bench\compare_results.py"
+
+PS C:\Users\user\Desktop\Trinity_STEM> Write-Host "`n✅ Comparison complete."
+
+✅ Comparison complete.
+PS C:\Users\user\Desktop\Trinity_STEM> # === Output Summary ===
+PS C:\Users\user\Desktop\Trinity_STEM> $resultsFile = "$Bench\compare_results.json"
+PS C:\Users\user\Desktop\Trinity_STEM> if (Test-Path $resultsFile) {
+    Write-Host "`n--- 📊 Final Trinity Δ₂ Benchmark Summary ---`n"
+    Get-Content $resultsFile | Tee-Object -FilePath "$logDir\compare_results_copy.json" | Out-Host
+} else {
+    Write-Host "`n⚠️ No results file found. Check individual stage outputs."
+}
+
+⚠️ No results file found. Check individual stage outputs.
+PS C:\Users\user\Desktop\Trinity_STEM> Write-Host "`n🎯 Trinity Δ₂ Full Benchmark Suite Finished!"
+
+🎯 Trinity Δ₂ Full Benchmark Suite Finished!
+PS C:\Users\user\Desktop\Trinity_STEM> Write-Host "   Logs: $logDir`n"
+   Logs: C:\Users\user\Desktop\Trinity_STEM\benchmarks\logs_20251020_090747
+PS C:\Users\user\Desktop\Trinity_STEM> Stop-Transcript | Out-Null
+**********************
+Windows PowerShell transcript end
+End time: 20251020090750
+**********************

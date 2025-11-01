@@ -1,0 +1,8 @@
+{
+    "phase": "orchestrator",
+    "duration": 90.11,
+    "cpu_avg": 4.15,
+    "cpu_peak": 42.5,
+    "mem_avg": 40.73,
+    "mem_peak": 41.4
+}

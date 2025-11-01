@@ -1,0 +1,56 @@
+{
+  "low": {
+    "level": "low",
+    "\u0394+1_controller": {
+      "error_var": 0.0030434633321648487,
+      "abs_error_mean": 0.035395383979142464,
+      "output_std": 0.03663816228429096,
+      "recovery_iters": 4.9,
+      "energy_integral": 6.2863099260707305
+    },
+    "Adam_optimizer": {
+      "error_var": 0.006460437389923815,
+      "abs_error_mean": 0.04512508889896458,
+      "output_std": 0.07907724239250785,
+      "recovery_iters": 12.9,
+      "energy_integral": 1.402977661517824
+    },
+    "timestamp": "2025-11-01T07:51:05Z"
+  },
+  "medium": {
+    "level": "medium",
+    "\u0394+1_controller": {
+      "error_var": 0.01201701039765211,
+      "abs_error_mean": 0.0833383737440878,
+      "output_std": 0.07511593906171082,
+      "recovery_iters": 6.1,
+      "energy_integral": 14.816320205985738
+    },
+    "Adam_optimizer": {
+      "error_var": 0.011375546270004677,
+      "abs_error_mean": 0.07603781737194562,
+      "output_std": 0.06585498362064209,
+      "recovery_iters": 15.8,
+      "energy_integral": 1.6129326698268849
+    },
+    "timestamp": "2025-11-01T07:51:05Z"
+  },
+  "high": {
+    "level": "high",
+    "\u0394+1_controller": {
+      "error_var": 0.04107288453835871,
+      "abs_error_mean": 0.162989325327073,
+      "output_std": 0.13000832466944165,
+      "recovery_iters": 8.6,
+      "energy_integral": 28.355959790962107
+    },
+    "Adam_optimizer": {
+      "error_var": 0.032776194008402884,
+      "abs_error_mean": 0.1278706909790981,
+      "output_std": 0.09727475447413095,
+      "recovery_iters": 15.0,
+      "energy_integral": 1.797156191627384
+    },
+    "timestamp": "2025-11-01T07:51:05Z"
+  }
+}

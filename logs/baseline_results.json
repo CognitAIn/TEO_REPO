@@ -1,0 +1,9 @@
+{
+    "phase": "baseline",
+    "timestamp": "2025-10-20 10:26:50",
+    "duration": 60.08,
+    "cpu_avg": 7.34,
+    "cpu_peak": 11.5,
+    "mem_avg": 40.36,
+    "mem_peak": 40.6
+}

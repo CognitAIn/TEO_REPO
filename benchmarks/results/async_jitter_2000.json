@@ -1,0 +1,17 @@
+{
+  "config": {
+    "trials": 10,
+    "steps": 2000,
+    "arrival_noise": "bursty + sinusoid",
+    "target_latency": 1.0
+  },
+  "\u0394+1_controller": {
+    "jitter_pct_mean": 1378.8485840398228,
+    "jitter_pct_std": 466.9956943904095
+  },
+  "Adam_optimizer": {
+    "jitter_pct_mean": 188.07488094485262,
+    "jitter_pct_std": 11.097157957298423
+  },
+  "timestamp": "2025-11-01T09:17:17Z"
+}

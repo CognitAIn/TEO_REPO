@@ -1,0 +1,16 @@
+{
+  "config": {
+    "trials": 10,
+    "steps": 2000,
+    "controller": "\u0394+1 stabilized (K=0.015, \u03b1=0.5, \u03b3=0.2)"
+  },
+  "\u0394+1_stabilized": {
+    "jitter_pct_mean": 115.59749413433956,
+    "jitter_pct_std": 169.56281215222242
+  },
+  "Adam_optimizer": {
+    "jitter_pct_mean": 188.07488094485262,
+    "jitter_pct_std": 11.097157957298423
+  },
+  "timestamp": "2025-11-01T09:19:37Z"
+}

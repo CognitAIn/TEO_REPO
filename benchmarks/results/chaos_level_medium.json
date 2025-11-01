@@ -1,0 +1,18 @@
+{
+  "level": "medium",
+  "\u0394+1_controller": {
+    "error_var": 0.01201701039765211,
+    "abs_error_mean": 0.0833383737440878,
+    "output_std": 0.07511593906171082,
+    "recovery_iters": 6.1,
+    "energy_integral": 14.816320205985738
+  },
+  "Adam_optimizer": {
+    "error_var": 0.011375546270004677,
+    "abs_error_mean": 0.07603781737194562,
+    "output_std": 0.06585498362064209,
+    "recovery_iters": 15.8,
+    "energy_integral": 1.6129326698268849
+  },
+  "timestamp": "2025-11-01T07:51:05Z"
+}

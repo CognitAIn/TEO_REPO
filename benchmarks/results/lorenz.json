@@ -1,0 +1,23 @@
+{
+  "\u0394+1": {
+    "error_var": 600.1527639915238,
+    "abs_error_mean": 21.738851128057657,
+    "output_std": 24.470112954795187,
+    "recovery_iters": 0,
+    "energy_integral": 492.73294725432413
+  },
+  "Adam": {
+    "error_var": 71.20662349926997,
+    "abs_error_mean": 7.934731083051489,
+    "output_std": 8.334231623413093,
+    "recovery_iters": 3,
+    "energy_integral": 165.13816837368776
+  },
+  "timestamp": "2025-11-01T08:04:43Z",
+  "config": {
+    "T": 4000,
+    "dt": 0.01,
+    "seed": 7,
+    "noise": 0.06
+  }
+}
