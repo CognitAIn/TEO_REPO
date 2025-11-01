@@ -1,0 +1,48 @@
+{
+    "baseline": {
+        "phase": "baseline",
+        "device": "OpenCL: Intel(R) UHD Graphics 620",
+        "duration": 45.018,
+        "cpu_avg": 19.22,
+        "cpu_peak": 72.0,
+        "mem_avg": 43.4,
+        "mem_peak": 43.5,
+        "work_ops": 9035,
+        "ops_per_sec": 200.697,
+        "kernel_ms_avg": 3.601,
+        "kernel_ms_p95": 4.109
+    },
+    "orchestrated": {
+        "phase": "orchestrated",
+        "device": "OpenCL: Intel(R) UHD Graphics 620",
+        "duration": 45.046,
+        "cpu_avg": 14.32,
+        "cpu_peak": 72.0,
+        "mem_avg": 43.33,
+        "mem_peak": 43.5,
+        "work_ops": 6054,
+        "ops_per_sec": 134.396,
+        "kernel_ms_avg": 3.596,
+        "kernel_ms_p95": 4.09
+    },
+    "comparison": {
+        "timestamp": "2025-10-21 07:31:53",
+        "device": "OpenCL: Intel(R) UHD Graphics 620",
+        "work_ops_baseline": 9035,
+        "work_ops_orchestrated": 6054,
+        "ops_sec_baseline": 200.697,
+        "ops_sec_orchestrated": 134.396,
+        "throughput_ratio": 0.67,
+        "cpu_avg_baseline": 19.22,
+        "cpu_avg_orchestrated": 14.32,
+        "cpu_drop_pct": 25.49,
+        "mem_avg_baseline": 43.4,
+        "mem_avg_orchestrated": 43.33,
+        "efficiency_ops_per_cpu_baseline": 10.442,
+        "efficiency_ops_per_cpu_orchestrated": 9.385,
+        "kernel_ms_avg_baseline": 3.601,
+        "kernel_ms_avg_orchestrated": 3.596,
+        "kernel_ms_p95_baseline": 4.109,
+        "kernel_ms_p95_orchestrated": 4.09
+    }
+}

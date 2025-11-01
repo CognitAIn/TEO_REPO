@@ -1,0 +1,8 @@
+{
+  "mode": "normal",
+  "weights": {
+    "lambda": 1.0,
+    "beta": 1.0,
+    "desc": "Balanced operation"
+  }
+}

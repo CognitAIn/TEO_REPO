@@ -1,0 +1,15 @@
+{
+    "timestamp": "2025-10-22 00:10:31",
+    "baseline": {
+        "label": "Baseline_Test",
+        "cpu_avg": 4.87,
+        "temp_avg": 52.795085962423926,
+        "duty_mean": 0.5
+    },
+    "active": {
+        "label": "Trinity_Test",
+        "cpu_avg": 4.36,
+        "temp_avg": 52.68035224106323,
+        "duty_mean": 0.23025
+    }
+}

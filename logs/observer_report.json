@@ -1,0 +1,242 @@
+[
+    {
+        "timestamp": "2025-10-21T09:28:03.241723",
+        "cpu": 15.1,
+        "mem": 44.5,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:04.243097",
+        "cpu": 3.7,
+        "mem": 44.5,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:05.244226",
+        "cpu": 5.7,
+        "mem": 44.5,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:06.245284",
+        "cpu": 3.1,
+        "mem": 44.5,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:07.246896",
+        "cpu": 3.3,
+        "mem": 44.5,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:08.247836",
+        "cpu": 4.8,
+        "mem": 44.5,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:09.248543",
+        "cpu": 3.1,
+        "mem": 44.5,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:10.250009",
+        "cpu": 4.1,
+        "mem": 44.5,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:11.251095",
+        "cpu": 4.1,
+        "mem": 44.5,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:12.253061",
+        "cpu": 4.5,
+        "mem": 44.3,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:13.253792",
+        "cpu": 5.0,
+        "mem": 44.3,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:14.255430",
+        "cpu": 3.9,
+        "mem": 44.3,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:15.256740",
+        "cpu": 3.7,
+        "mem": 44.3,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:16.257910",
+        "cpu": 3.9,
+        "mem": 44.3,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    },
+    {
+        "timestamp": "2025-10-21T09:28:17.258992",
+        "cpu": 5.3,
+        "mem": 44.3,
+        "gpu": [
+            {
+                "id": 0,
+                "load": 0.0,
+                "mem": 0.0,
+                "vendor": "Intel"
+            }
+        ],
+        "active_backends": {
+            "intel": "OpenCL"
+        }
+    }
+]

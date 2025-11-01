@@ -1,0 +1,27 @@
+{
+    "phase": "\u0394\u2082_performance_suite",
+    "timestamp": "2025-10-20 10:29:20",
+    "duration_total": 90.18,
+    "cpu_now": 11.5,
+    "mem_now": 40.5,
+    "tasks": [
+        {
+            "label": "Memory",
+            "duration": 90.14,
+            "cpu_avg": 7.98,
+            "mem_avg": 40.43
+        },
+        {
+            "label": "Gaming",
+            "duration": 89.14,
+            "cpu_avg": 7.68,
+            "mem_avg": 40.42
+        },
+        {
+            "label": "Grid",
+            "duration": 88.18,
+            "cpu_avg": 8.11,
+            "mem_avg": 40.42
+        }
+    ]
+}

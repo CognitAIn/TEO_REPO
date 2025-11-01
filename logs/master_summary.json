@@ -1,0 +1,11 @@
+{
+    "timestamp": "2025-10-20 10:29:21",
+    "cpu_delta_avg": 0.05,
+    "cpu_delta_peak": 21.8,
+    "mem_delta_avg": -0.02,
+    "mem_delta_peak": -0.2,
+    "runtime_ratio": 1.0,
+    "suite_cpu_now": 11.5,
+    "suite_mem_now": 40.5,
+    "suite_duration": 90.18
+}
