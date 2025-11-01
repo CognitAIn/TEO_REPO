@@ -1,0 +1,13 @@
+{
+  "\u0394+1_controller": {
+    "error_var": 0.3321738542594571,
+    "abs_error_mean": 0.5006251157160568,
+    "output_std": 0.23987304950785582
+  },
+  "Adam_optimizer": {
+    "error_var": 0.004414140959436307,
+    "abs_error_mean": 0.0367965801054822,
+    "output_std": 0.0438002613479468
+  },
+  "timestamp": "2025-11-01T07:12:46Z"
+}
