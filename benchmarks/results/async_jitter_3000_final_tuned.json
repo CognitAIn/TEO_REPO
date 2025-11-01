@@ -1,0 +1,18 @@
+{
+  "config": {
+    "trials": 10,
+    "steps": 3000,
+    "K": 0.01,
+    "alpha": 0.9,
+    "gamma": 0.95
+  },
+  "\u0394+1_final": {
+    "jitter_pct_mean": 59.01868121085365,
+    "jitter_pct_std": 1.234673424865635
+  },
+  "Adam_optimizer": {
+    "jitter_pct_mean": 188.60864711077693,
+    "jitter_pct_std": 8.352392235918243
+  },
+  "timestamp": "2025-11-01T10:26:17Z"
+}
